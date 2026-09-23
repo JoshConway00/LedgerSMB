@@ -1,0 +1,12 @@
+.git
+.github
+.circleci
+.local
+local
+UI/node_modules
+*.log
+.env
+.env.*
+*.db
+*.sqlite
+*.sqlite3
