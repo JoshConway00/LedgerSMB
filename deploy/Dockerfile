@@ -11,4 +11,5 @@ COPY --chown=www-data:www-data . /srv/ledgersmb/
 RUN test -n "$(find /srv/ledgersmb/UI/js -type f -name '*.js' -print -quit)" \
     && test -f /srv/ledgersmb/cpanfile \
     && test -f /srv/ledgersmb/bin/ledgersmb-server.psgi
-USER www-data
+# The official proxy image starts s6 as root and drops privileges inside its
+# nginx and Starman service scripts. Keep that runtime user unchanged.
